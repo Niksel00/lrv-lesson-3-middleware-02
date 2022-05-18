@@ -13,6 +13,6 @@ class ProfileController extends Controller
      */
     public function __invoke()
     {
-        return view('profile', ['name' => Auth::user()->name, 'email' => Auth::user()->email, 'id' => Auth::user()->id]);
+        return view('profile', ['user' => Auth::user()]);
     }
 }
